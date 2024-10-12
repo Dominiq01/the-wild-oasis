@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme('colors.primary.900');
+    border-right-color: theme('colors.primary.200');
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme('colors.primary.200');
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker */
+.rdp-root {
+  --rdp-day-height: 32px !important;
+  --rdp-day-width: 32px !important;
+  --rdp-accent-color: theme('colors.accent.500') !important;
+  --rdp-background-color: theme('colors.accent.600') !important;
+  --rdp-range_middle-color: theme('colors.accent.700') !important;
+  --rdp-range_middle-background-color: theme('colors.accent.50') !important;
+  margin: 0 !important;
+}
+
+.rdp-dropdown select {
+  background-color: #f0f4f8;
+  color: #333;
+  border: 1px solid #b0c4de; 
+}
+
+.rdp-dropdown select:hover {
+  background-color: #e3ebf3;
+  border-color: #7890a0; 
+}
+
+.rdp-dropdown option {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.rdp-dropdown option:disabled {
+  background-color: #e0e0e0;
+  color: #999; 
+}
