@@ -83,7 +83,9 @@ function ReservationForm({ cabin, user }) {
           {!startDate || !endDate ? (
             <p className="text-primary-300 text-base">Start by selecting dates</p>
           ) : (
-            <SubmitButton children={"Reserve now"} pendingLabel={"Pending..."} />
+            <SubmitButton pendingLabel={"Pending..."} >
+              Reserve now
+            </SubmitButton>
           )}
         </div>
       </form>
